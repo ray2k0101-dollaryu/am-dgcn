@@ -1,0 +1,30 @@
+# The datasets are never redistributed with this repository -- neither the raw
+# recordings nor anything derived from them.  Download them yourself and point
+# AMDGCN_DATA at the folder (see README).
+data/
+EEG_data/
+
+# derived feature caches: 205 MB, regenerated on first run
+*.npz
+
+# trained weights are not stored anywhere in this project -- reproduction of the
+# reported numbers means re-running training -- but guard against them anyway
+*.pt
+*.pth
+*.ckpt
+
+# run logs contain absolute paths from the machine that produced them
+*.log
+
+# raw dataset formats, in case a data folder is ever dropped in here by accident
+*.mat
+*.dat
+
+# editor / OS noise
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
