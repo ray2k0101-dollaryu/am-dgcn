@@ -1,0 +1,49 @@
+# CITATION.cff -- how to cite this repository, and the paper it belongs to.
+#
+# Affiliation is deliberately omitted here: the paper carries it, so it adds
+# nothing to this file, and keeping one copy of it is easier to maintain than
+# two.  The funding acknowledgement is likewise only in the paper.
+
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+
+title: "AM-DGCN: does the multi-scale graph help? A systematic controlled study of EEG emotion recognition"
+abstract: >-
+  Code and result files reproducing every table and figure of a controlled study
+  of AM-DGCN, an adaptive multi-scale dynamic graph convolutional network for
+  EEG-based emotion recognition. The study isolates the contribution of the
+  multi-scale graph hierarchy from that of a parallel linear shortcut under
+  leave-one-subject-out evaluation on SEED, SEED-IV and DEAP, and includes
+  matched linear-ceiling controls and a ten-variant ablation.
+version: "1.0.0"
+date-released: "2026-09-24"
+license: MIT
+
+# The account "ray2k0101-dollaryu" exists (checked 2026-09-24), but the
+# repository itself has not been created yet, so this URL does not resolve.
+# It must exist before manuscript submission, because the manuscript's Data
+# Availability Statement points here.
+repository-code: "https://github.com/ray2k0101-dollaryu/am-dgcn"
+
+authors:
+  - family-names: Yu
+    given-names: Lei
+  - family-names: Ding
+    given-names: Rongtao
+  - family-names: Wang
+    given-names: Decheng
+
+preferred-citation:
+  type: article
+  title: "Does the Multi-Scale Graph Help? A Systematic Controlled Study of AM-DGCN for EEG Emotion Recognition"
+  authors:
+    - family-names: Yu
+      given-names: Lei
+    - family-names: Ding
+      given-names: Rongtao
+    - family-names: Wang
+      given-names: Decheng
+  journal: "Brain Sciences"
+  publisher:
+    name: MDPI
+  year: 2026

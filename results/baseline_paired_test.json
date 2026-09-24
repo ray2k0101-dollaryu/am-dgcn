@@ -1,0 +1,865 @@
+{
+  "reference_note": "AM-DGCN reference is the ablated Full model (60 epochs, patience 20), the same protocol the baselines ran under -- not the 100-epoch headline.",
+  "sd_convention": "descriptive sds are population sds (ddof=0), as in Tables 1/8/9",
+  "seed": 20260918,
+  "datasets": {
+    "SEED": {
+      "dataset": "SEED",
+      "reference": {
+        "model": "AM-DGCN (Full, ablation protocol)",
+        "mean_accuracy_pp": 64.8889,
+        "std_accuracy_pp": 10.0763,
+        "n_params": 67582,
+        "n_subjects": 15,
+        "source": "seed_ablation_checkpoint.json"
+      },
+      "baselines": {
+        "DGCNN": {
+          "mean_accuracy_pp": 62.2222,
+          "std_accuracy_pp": 10.6419,
+          "n_params": 201389,
+          "extra_kwargs": null,
+          "vs_amdgc": {
+            "label": "DGCNN",
+            "n": 15,
+            "mean_diff_pp": 2.6667,
+            "ci95_low_pp": -1.966,
+            "ci95_high_pp": 7.2994,
+            "paired_t": 1.2346,
+            "t_df": 14,
+            "t_pvalue": 0.23730720767495161,
+            "wilcoxon_pvalue": 0.2724609375,
+            "cohens_dz": 0.3188,
+            "significant_05": false
+          },
+          "vs_ceiling": {
+            "label": "DGCNN",
+            "n": 15,
+            "mean_diff_pp": 10.2222,
+            "ci95_low_pp": 3.8142,
+            "ci95_high_pp": 16.6303,
+            "paired_t": 3.4214,
+            "t_df": 14,
+            "t_pvalue": 0.004133127897762252,
+            "wilcoxon_pvalue": 0.0037841796875,
+            "cohens_dz": 0.8834,
+            "significant_05": true
+          }
+        },
+        "DGCNN-matched": {
+          "mean_accuracy_pp": 64.1481,
+          "std_accuracy_pp": 9.1756,
+          "n_params": 68249,
+          "extra_kwargs": {
+            "conv_channels": [
+              36,
+              72,
+              144,
+              36
+            ]
+          },
+          "vs_amdgc": {
+            "label": "DGCNN-matched",
+            "n": 15,
+            "mean_diff_pp": 0.7407,
+            "ci95_low_pp": -4.8538,
+            "ci95_high_pp": 6.3352,
+            "paired_t": 0.284,
+            "t_df": 14,
+            "t_pvalue": 0.7805817210647865,
+            "wilcoxon_pvalue": 0.9150390625,
+            "cohens_dz": 0.0733,
+            "significant_05": false
+          },
+          "vs_ceiling": {
+            "label": "DGCNN-matched",
+            "n": 15,
+            "mean_diff_pp": 12.1481,
+            "ci95_low_pp": 6.3411,
+            "ci95_high_pp": 17.9552,
+            "paired_t": 4.4868,
+            "t_df": 14,
+            "t_pvalue": 0.0005119296040884912,
+            "wilcoxon_pvalue": 0.000244140625,
+            "cohens_dz": 1.1585,
+            "significant_05": true
+          }
+        },
+        "RGNN": {
+          "mean_accuracy_pp": 58.6667,
+          "std_accuracy_pp": 9.798,
+          "n_params": 20801,
+          "extra_kwargs": {
+            "use_nodedat": true
+          },
+          "vs_amdgc": {
+            "label": "RGNN",
+            "n": 15,
+            "mean_diff_pp": 6.2222,
+            "ci95_low_pp": 0.3719,
+            "ci95_high_pp": 12.0725,
+            "paired_t": 2.2811,
+            "t_df": 14,
+            "t_pvalue": 0.03870966691384221,
+            "wilcoxon_pvalue": 0.041015625,
+            "cohens_dz": 0.589,
+            "significant_05": true
+          },
+          "vs_ceiling": {
+            "label": "RGNN",
+            "n": 15,
+            "mean_diff_pp": 6.6667,
+            "ci95_low_pp": 0.6199,
+            "ci95_high_pp": 12.7134,
+            "paired_t": 2.3647,
+            "t_df": 14,
+            "t_pvalue": 0.03302556498795856,
+            "wilcoxon_pvalue": 0.037109375,
+            "cohens_dz": 0.6106,
+            "significant_05": true
+          }
+        },
+        "RGNN-plain": {
+          "mean_accuracy_pp": 56.2963,
+          "std_accuracy_pp": 11.3215,
+          "n_params": 15731,
+          "extra_kwargs": {
+            "use_nodedat": false
+          },
+          "vs_amdgc": {
+            "label": "RGNN-plain",
+            "n": 15,
+            "mean_diff_pp": 8.5926,
+            "ci95_low_pp": 3.3124,
+            "ci95_high_pp": 13.8728,
+            "paired_t": 3.4903,
+            "t_df": 14,
+            "t_pvalue": 0.0036041176453466806,
+            "wilcoxon_pvalue": 0.00408935546875,
+            "cohens_dz": 0.9012,
+            "significant_05": true
+          },
+          "vs_ceiling": {
+            "label": "RGNN-plain",
+            "n": 15,
+            "mean_diff_pp": 4.2963,
+            "ci95_low_pp": -1.7588,
+            "ci95_high_pp": 10.3514,
+            "paired_t": 1.5218,
+            "t_df": 14,
+            "t_pvalue": 0.15032026376029684,
+            "wilcoxon_pvalue": 0.208251953125,
+            "cohens_dz": 0.3929,
+            "significant_05": false
+          }
+        }
+      },
+      "ceiling": {
+        "mean_accuracy_pp": 52.0,
+        "std_accuracy_pp": 10.8199,
+        "n_params": null,
+        "vs_amdgc": {
+          "label": "linear ceiling",
+          "n": 15,
+          "mean_diff_pp": 12.8889,
+          "ci95_low_pp": 8.2562,
+          "ci95_high_pp": 17.5216,
+          "paired_t": 5.9671,
+          "t_df": 14,
+          "t_pvalue": 3.444164250782269e-05,
+          "wilcoxon_pvalue": 0.0003662109375,
+          "cohens_dz": 1.5407,
+          "significant_05": true
+        }
+      },
+      "vs_variants": {
+        "w/o Linear Shortcut": {
+          "mean_accuracy_pp": 57.6296,
+          "std_accuracy_pp": 9.6171,
+          "description": "graph pathway, shortcut removed",
+          "baselines": {
+            "DGCNN": {
+              "label": "DGCNN",
+              "n": 15,
+              "mean_diff_pp": -4.5926,
+              "ci95_low_pp": -9.0653,
+              "ci95_high_pp": -0.1199,
+              "paired_t": -2.2023,
+              "t_df": 14,
+              "t_pvalue": 0.04490795871841763,
+              "wilcoxon_pvalue": 0.053466796875,
+              "cohens_dz": -0.5686,
+              "significant_05": true
+            },
+            "DGCNN-matched": {
+              "label": "DGCNN-matched",
+              "n": 15,
+              "mean_diff_pp": -6.5185,
+              "ci95_low_pp": -9.1277,
+              "ci95_high_pp": -3.9093,
+              "paired_t": -5.3583,
+              "t_df": 14,
+              "t_pvalue": 0.0001009199891646745,
+              "wilcoxon_pvalue": 0.0003662109375,
+              "cohens_dz": -1.3835,
+              "significant_05": true
+            },
+            "RGNN": {
+              "label": "RGNN",
+              "n": 15,
+              "mean_diff_pp": -1.037,
+              "ci95_low_pp": -4.7832,
+              "ci95_high_pp": 2.7091,
+              "paired_t": -0.5937,
+              "t_df": 14,
+              "t_pvalue": 0.5621622825680633,
+              "wilcoxon_pvalue": 0.55859375,
+              "cohens_dz": -0.1533,
+              "significant_05": false
+            },
+            "RGNN-plain": {
+              "label": "RGNN-plain",
+              "n": 15,
+              "mean_diff_pp": 1.3333,
+              "ci95_low_pp": -2.1412,
+              "ci95_high_pp": 4.8078,
+              "paired_t": 0.8231,
+              "t_df": 14,
+              "t_pvalue": 0.4242751973727481,
+              "wilcoxon_pvalue": 0.7470703125,
+              "cohens_dz": 0.2125,
+              "significant_05": false
+            }
+          }
+        },
+        "Single Scale (GCN)": {
+          "mean_accuracy_pp": 57.9259,
+          "std_accuracy_pp": 8.8319,
+          "description": "electrode GCN only, no shortcut",
+          "baselines": {
+            "DGCNN": {
+              "label": "DGCNN",
+              "n": 15,
+              "mean_diff_pp": -4.2963,
+              "ci95_low_pp": -8.4427,
+              "ci95_high_pp": -0.1499,
+              "paired_t": -2.2223,
+              "t_df": 14,
+              "t_pvalue": 0.04324895006897198,
+              "wilcoxon_pvalue": 0.0545654296875,
+              "cohens_dz": -0.5738,
+              "significant_05": true
+            },
+            "DGCNN-matched": {
+              "label": "DGCNN-matched",
+              "n": 15,
+              "mean_diff_pp": -6.2222,
+              "ci95_low_pp": -8.9023,
+              "ci95_high_pp": -3.5422,
+              "paired_t": -4.9795,
+              "t_df": 14,
+              "t_pvalue": 0.0002020667909213081,
+              "wilcoxon_pvalue": 0.00048828125,
+              "cohens_dz": -1.2857,
+              "significant_05": true
+            },
+            "RGNN": {
+              "label": "RGNN",
+              "n": 15,
+              "mean_diff_pp": -0.7407,
+              "ci95_low_pp": -4.3034,
+              "ci95_high_pp": 2.8219,
+              "paired_t": -0.4459,
+              "t_df": 14,
+              "t_pvalue": 0.6624587091730738,
+              "wilcoxon_pvalue": 0.6845703125,
+              "cohens_dz": -0.1151,
+              "significant_05": false
+            },
+            "RGNN-plain": {
+              "label": "RGNN-plain",
+              "n": 15,
+              "mean_diff_pp": 1.6296,
+              "ci95_low_pp": -1.5067,
+              "ci95_high_pp": 4.766,
+              "paired_t": 1.1144,
+              "t_df": 14,
+              "t_pvalue": 0.2838648188647984,
+              "wilcoxon_pvalue": 0.30322265625,
+              "cohens_dz": 0.2877,
+              "significant_05": false
+            }
+          }
+        },
+        "Linear Only (no GCN)": {
+          "mean_accuracy_pp": 65.9259,
+          "std_accuracy_pp": 12.1355,
+          "description": "shortcut pathway, graph removed",
+          "baselines": {
+            "DGCNN": {
+              "label": "DGCNN",
+              "n": 15,
+              "mean_diff_pp": 3.7037,
+              "ci95_low_pp": -1.4268,
+              "ci95_high_pp": 8.8342,
+              "paired_t": 1.5483,
+              "t_df": 14,
+              "t_pvalue": 0.14385173415540287,
+              "wilcoxon_pvalue": 0.17144775390625,
+              "cohens_dz": 0.3998,
+              "significant_05": false
+            },
+            "DGCNN-matched": {
+              "label": "DGCNN-matched",
+              "n": 15,
+              "mean_diff_pp": 1.7778,
+              "ci95_low_pp": -4.054,
+              "ci95_high_pp": 7.6096,
+              "paired_t": 0.6538,
+              "t_df": 14,
+              "t_pvalue": 0.5238223767769921,
+              "wilcoxon_pvalue": 0.61279296875,
+              "cohens_dz": 0.1688,
+              "significant_05": false
+            },
+            "RGNN": {
+              "label": "RGNN",
+              "n": 15,
+              "mean_diff_pp": 7.2593,
+              "ci95_low_pp": 1.8256,
+              "ci95_high_pp": 12.6929,
+              "paired_t": 2.8654,
+              "t_df": 14,
+              "t_pvalue": 0.01246521421144585,
+              "wilcoxon_pvalue": 0.0201416015625,
+              "cohens_dz": 0.7398,
+              "significant_05": true
+            },
+            "RGNN-plain": {
+              "label": "RGNN-plain",
+              "n": 15,
+              "mean_diff_pp": 9.6296,
+              "ci95_low_pp": 4.5202,
+              "ci95_high_pp": 14.739,
+              "paired_t": 4.0422,
+              "t_df": 14,
+              "t_pvalue": 0.001211493864627726,
+              "wilcoxon_pvalue": 0.0023193359375,
+              "cohens_dz": 1.0437,
+              "significant_05": true
+            }
+          }
+        }
+      },
+      "baseline_pairwise": {
+        "DGCNN - DGCNN-matched": {
+          "label": "DGCNN - DGCNN-matched",
+          "n": 15,
+          "mean_diff_pp": -1.9259,
+          "ci95_low_pp": -5.7859,
+          "ci95_high_pp": 1.934,
+          "paired_t": -1.0701,
+          "t_df": 14,
+          "t_pvalue": 0.3026581395539062,
+          "wilcoxon_pvalue": 0.38104248046875,
+          "cohens_dz": -0.2763,
+          "significant_05": false
+        },
+        "DGCNN - RGNN": {
+          "label": "DGCNN - RGNN",
+          "n": 15,
+          "mean_diff_pp": 3.5556,
+          "ci95_low_pp": -1.8847,
+          "ci95_high_pp": 8.9958,
+          "paired_t": 1.4018,
+          "t_df": 14,
+          "t_pvalue": 0.1827688252931602,
+          "wilcoxon_pvalue": 0.08062744140625,
+          "cohens_dz": 0.3619,
+          "significant_05": false
+        },
+        "DGCNN - RGNN-plain": {
+          "label": "DGCNN - RGNN-plain",
+          "n": 15,
+          "mean_diff_pp": 5.9259,
+          "ci95_low_pp": 1.8532,
+          "ci95_high_pp": 9.9986,
+          "paired_t": 3.1208,
+          "t_df": 14,
+          "t_pvalue": 0.007515970075950927,
+          "wilcoxon_pvalue": 0.01318359375,
+          "cohens_dz": 0.8058,
+          "significant_05": true
+        },
+        "DGCNN-matched - RGNN": {
+          "label": "DGCNN-matched - RGNN",
+          "n": 15,
+          "mean_diff_pp": 5.4815,
+          "ci95_low_pp": 1.8826,
+          "ci95_high_pp": 9.0804,
+          "paired_t": 3.2667,
+          "t_df": 14,
+          "t_pvalue": 0.005622470709081584,
+          "wilcoxon_pvalue": 0.0029296875,
+          "cohens_dz": 0.8435,
+          "significant_05": true
+        },
+        "DGCNN-matched - RGNN-plain": {
+          "label": "DGCNN-matched - RGNN-plain",
+          "n": 15,
+          "mean_diff_pp": 7.8519,
+          "ci95_low_pp": 4.1347,
+          "ci95_high_pp": 11.569,
+          "paired_t": 4.5305,
+          "t_df": 14,
+          "t_pvalue": 0.00047094726387148856,
+          "wilcoxon_pvalue": 0.000244140625,
+          "cohens_dz": 1.1698,
+          "significant_05": true
+        },
+        "RGNN - RGNN-plain": {
+          "label": "RGNN - RGNN-plain",
+          "n": 15,
+          "mean_diff_pp": 2.3704,
+          "ci95_low_pp": -1.0307,
+          "ci95_high_pp": 5.7715,
+          "paired_t": 1.4948,
+          "t_df": 14,
+          "t_pvalue": 0.15716402111588135,
+          "wilcoxon_pvalue": 0.0982666015625,
+          "cohens_dz": 0.386,
+          "significant_05": false
+        }
+      }
+    },
+    "SEED-IV": {
+      "dataset": "SEED-IV",
+      "reference": {
+        "model": "AM-DGCN (Full, ablation protocol)",
+        "mean_accuracy_pp": 48.8889,
+        "std_accuracy_pp": 8.9896,
+        "n_params": 67582,
+        "n_subjects": 15,
+        "source": "seediv_ablation_checkpoint.json"
+      },
+      "baselines": {
+        "DGCNN": {
+          "mean_accuracy_pp": 37.6852,
+          "std_accuracy_pp": 4.6995,
+          "n_params": 201422,
+          "extra_kwargs": {},
+          "vs_amdgc": {
+            "label": "DGCNN",
+            "n": 15,
+            "mean_diff_pp": 11.2037,
+            "ci95_low_pp": 6.2406,
+            "ci95_high_pp": 16.1668,
+            "paired_t": 4.8417,
+            "t_df": 14,
+            "t_pvalue": 0.0002613132658325178,
+            "wilcoxon_pvalue": 0.00030517578125,
+            "cohens_dz": 1.2501,
+            "significant_05": true
+          },
+          "vs_ceiling": {
+            "label": "DGCNN",
+            "n": 15,
+            "mean_diff_pp": -2.1296,
+            "ci95_low_pp": -6.371,
+            "ci95_high_pp": 2.1118,
+            "paired_t": -1.0769,
+            "t_df": 14,
+            "t_pvalue": 0.29973033334718246,
+            "wilcoxon_pvalue": 0.730224609375,
+            "cohens_dz": -0.2781,
+            "significant_05": false
+          }
+        },
+        "DGCNN-matched": {
+          "mean_accuracy_pp": 38.7037,
+          "std_accuracy_pp": 5.5525,
+          "n_params": 68282,
+          "extra_kwargs": {
+            "conv_channels": [
+              36,
+              72,
+              144,
+              36
+            ]
+          },
+          "vs_amdgc": {
+            "label": "DGCNN-matched",
+            "n": 15,
+            "mean_diff_pp": 10.1852,
+            "ci95_low_pp": 5.4469,
+            "ci95_high_pp": 14.9235,
+            "paired_t": 4.6103,
+            "t_df": 14,
+            "t_pvalue": 0.0004044744194828194,
+            "wilcoxon_pvalue": 0.0009765625,
+            "cohens_dz": 1.1904,
+            "significant_05": true
+          },
+          "vs_ceiling": {
+            "label": "DGCNN-matched",
+            "n": 15,
+            "mean_diff_pp": -1.1111,
+            "ci95_low_pp": -5.7278,
+            "ci95_high_pp": 3.5056,
+            "paired_t": -0.5162,
+            "t_df": 14,
+            "t_pvalue": 0.6137757192408619,
+            "wilcoxon_pvalue": 0.771728515625,
+            "cohens_dz": -0.1333,
+            "significant_05": false
+          }
+        },
+        "RGNN": {
+          "mean_accuracy_pp": 35.7407,
+          "std_accuracy_pp": 3.8779,
+          "n_params": 20834,
+          "extra_kwargs": {
+            "use_nodedat": true
+          },
+          "vs_amdgc": {
+            "label": "RGNN",
+            "n": 15,
+            "mean_diff_pp": 13.1481,
+            "ci95_low_pp": 8.4349,
+            "ci95_high_pp": 17.8614,
+            "paired_t": 5.9831,
+            "t_df": 14,
+            "t_pvalue": 3.350983450233001e-05,
+            "wilcoxon_pvalue": 6.103515625e-05,
+            "cohens_dz": 1.5448,
+            "significant_05": true
+          },
+          "vs_ceiling": {
+            "label": "RGNN",
+            "n": 15,
+            "mean_diff_pp": -4.0741,
+            "ci95_low_pp": -8.2714,
+            "ci95_high_pp": 0.1233,
+            "paired_t": -2.0818,
+            "t_df": 14,
+            "t_pvalue": 0.05619195151394187,
+            "wilcoxon_pvalue": 0.0931396484375,
+            "cohens_dz": -0.5375,
+            "significant_05": false
+          }
+        },
+        "RGNN-plain": {
+          "mean_accuracy_pp": 35.463,
+          "std_accuracy_pp": 5.8238,
+          "n_params": 15764,
+          "extra_kwargs": {
+            "use_nodedat": false
+          },
+          "vs_amdgc": {
+            "label": "RGNN-plain",
+            "n": 15,
+            "mean_diff_pp": 13.4259,
+            "ci95_low_pp": 7.8517,
+            "ci95_high_pp": 19.0001,
+            "paired_t": 5.1659,
+            "t_df": 14,
+            "t_pvalue": 0.00014326082254040548,
+            "wilcoxon_pvalue": 0.000244140625,
+            "cohens_dz": 1.3338,
+            "significant_05": true
+          },
+          "vs_ceiling": {
+            "label": "RGNN-plain",
+            "n": 15,
+            "mean_diff_pp": -4.3519,
+            "ci95_low_pp": -9.2584,
+            "ci95_high_pp": 0.5547,
+            "paired_t": -1.9023,
+            "t_df": 14,
+            "t_pvalue": 0.07790538858318993,
+            "wilcoxon_pvalue": 0.10791015625,
+            "cohens_dz": -0.4912,
+            "significant_05": false
+          }
+        }
+      },
+      "ceiling": {
+        "mean_accuracy_pp": 39.8148,
+        "std_accuracy_pp": 6.8731,
+        "n_params": null,
+        "vs_amdgc": {
+          "label": "linear ceiling",
+          "n": 15,
+          "mean_diff_pp": 9.0741,
+          "ci95_low_pp": 5.0159,
+          "ci95_high_pp": 13.1322,
+          "paired_t": 4.7958,
+          "t_df": 14,
+          "t_pvalue": 0.0002848063432201523,
+          "wilcoxon_pvalue": 0.0010986328125,
+          "cohens_dz": 1.2383,
+          "significant_05": true
+        }
+      },
+      "vs_variants": {
+        "w/o Linear Shortcut": {
+          "mean_accuracy_pp": 34.1667,
+          "std_accuracy_pp": 5.7333,
+          "description": "graph pathway, shortcut removed",
+          "baselines": {
+            "DGCNN": {
+              "label": "DGCNN",
+              "n": 15,
+              "mean_diff_pp": -3.5185,
+              "ci95_low_pp": -7.0175,
+              "ci95_high_pp": -0.0195,
+              "paired_t": -2.1568,
+              "t_df": 14,
+              "t_pvalue": 0.048896753869883305,
+              "wilcoxon_pvalue": 0.041259765625,
+              "cohens_dz": -0.5569,
+              "significant_05": true
+            },
+            "DGCNN-matched": {
+              "label": "DGCNN-matched",
+              "n": 15,
+              "mean_diff_pp": -4.537,
+              "ci95_low_pp": -8.5491,
+              "ci95_high_pp": -0.525,
+              "paired_t": -2.4254,
+              "t_df": 14,
+              "t_pvalue": 0.029399410980877092,
+              "wilcoxon_pvalue": 0.0311279296875,
+              "cohens_dz": -0.6262,
+              "significant_05": true
+            },
+            "RGNN": {
+              "label": "RGNN",
+              "n": 15,
+              "mean_diff_pp": -1.5741,
+              "ci95_low_pp": -3.9513,
+              "ci95_high_pp": 0.8031,
+              "paired_t": -1.4202,
+              "t_df": 14,
+              "t_pvalue": 0.1774368920061351,
+              "wilcoxon_pvalue": 0.1748046875,
+              "cohens_dz": -0.3667,
+              "significant_05": false
+            },
+            "RGNN-plain": {
+              "label": "RGNN-plain",
+              "n": 15,
+              "mean_diff_pp": -1.2963,
+              "ci95_low_pp": -3.1226,
+              "ci95_high_pp": 0.53,
+              "paired_t": -1.5224,
+              "t_df": 14,
+              "t_pvalue": 0.1501835416669839,
+              "wilcoxon_pvalue": 0.1064453125,
+              "cohens_dz": -0.3931,
+              "significant_05": false
+            }
+          }
+        },
+        "Single Scale (GCN)": {
+          "mean_accuracy_pp": 33.7037,
+          "std_accuracy_pp": 6.1795,
+          "description": "electrode GCN only, no shortcut",
+          "baselines": {
+            "DGCNN": {
+              "label": "DGCNN",
+              "n": 15,
+              "mean_diff_pp": -3.9815,
+              "ci95_low_pp": -7.1775,
+              "ci95_high_pp": -0.7855,
+              "paired_t": -2.6719,
+              "t_df": 14,
+              "t_pvalue": 0.018232416132237046,
+              "wilcoxon_pvalue": 0.014892578125,
+              "cohens_dz": -0.6899,
+              "significant_05": true
+            },
+            "DGCNN-matched": {
+              "label": "DGCNN-matched",
+              "n": 15,
+              "mean_diff_pp": -5.0,
+              "ci95_low_pp": -8.4002,
+              "ci95_high_pp": -1.5998,
+              "paired_t": -3.1539,
+              "t_df": 14,
+              "t_pvalue": 0.007036246938338482,
+              "wilcoxon_pvalue": 0.0106201171875,
+              "cohens_dz": -0.8143,
+              "significant_05": true
+            },
+            "RGNN": {
+              "label": "RGNN",
+              "n": 15,
+              "mean_diff_pp": -2.037,
+              "ci95_low_pp": -4.5186,
+              "ci95_high_pp": 0.4445,
+              "paired_t": -1.7606,
+              "t_df": 14,
+              "t_pvalue": 0.10012346527732682,
+              "wilcoxon_pvalue": 0.11474609375,
+              "cohens_dz": -0.4546,
+              "significant_05": false
+            },
+            "RGNN-plain": {
+              "label": "RGNN-plain",
+              "n": 15,
+              "mean_diff_pp": -1.7593,
+              "ci95_low_pp": -3.441,
+              "ci95_high_pp": -0.0775,
+              "paired_t": -2.2436,
+              "t_df": 14,
+              "t_pvalue": 0.04154999112709472,
+              "wilcoxon_pvalue": 0.04443359375,
+              "cohens_dz": -0.5793,
+              "significant_05": true
+            }
+          }
+        },
+        "Linear Only (no GCN)": {
+          "mean_accuracy_pp": 48.7037,
+          "std_accuracy_pp": 9.2333,
+          "description": "shortcut pathway, graph removed",
+          "baselines": {
+            "DGCNN": {
+              "label": "DGCNN",
+              "n": 15,
+              "mean_diff_pp": 11.0185,
+              "ci95_low_pp": 6.3088,
+              "ci95_high_pp": 15.7282,
+              "paired_t": 5.0178,
+              "t_df": 14,
+              "t_pvalue": 0.00018820344625743865,
+              "wilcoxon_pvalue": 0.0001220703125,
+              "cohens_dz": 1.2956,
+              "significant_05": true
+            },
+            "DGCNN-matched": {
+              "label": "DGCNN-matched",
+              "n": 15,
+              "mean_diff_pp": 10.0,
+              "ci95_low_pp": 5.5511,
+              "ci95_high_pp": 14.4489,
+              "paired_t": 4.821,
+              "t_df": 14,
+              "t_pvalue": 0.00027165691229277697,
+              "wilcoxon_pvalue": 0.000244140625,
+              "cohens_dz": 1.2448,
+              "significant_05": true
+            },
+            "RGNN": {
+              "label": "RGNN",
+              "n": 15,
+              "mean_diff_pp": 12.963,
+              "ci95_low_pp": 8.2157,
+              "ci95_high_pp": 17.7102,
+              "paired_t": 5.8566,
+              "t_df": 14,
+              "t_pvalue": 4.1706168731639755e-05,
+              "wilcoxon_pvalue": 0.0001220703125,
+              "cohens_dz": 1.5122,
+              "significant_05": true
+            },
+            "RGNN-plain": {
+              "label": "RGNN-plain",
+              "n": 15,
+              "mean_diff_pp": 13.2407,
+              "ci95_low_pp": 7.703,
+              "ci95_high_pp": 18.7785,
+              "paired_t": 5.1282,
+              "t_df": 14,
+              "t_pvalue": 0.00015351614590536502,
+              "wilcoxon_pvalue": 0.00048828125,
+              "cohens_dz": 1.3241,
+              "significant_05": true
+            }
+          }
+        }
+      },
+      "baseline_pairwise": {
+        "DGCNN - DGCNN-matched": {
+          "label": "DGCNN - DGCNN-matched",
+          "n": 15,
+          "mean_diff_pp": -1.0185,
+          "ci95_low_pp": -3.7682,
+          "ci95_high_pp": 1.7312,
+          "paired_t": -0.7944,
+          "t_df": 14,
+          "t_pvalue": 0.4401947371725238,
+          "wilcoxon_pvalue": 0.552978515625,
+          "cohens_dz": -0.2051,
+          "significant_05": false
+        },
+        "DGCNN - RGNN": {
+          "label": "DGCNN - RGNN",
+          "n": 15,
+          "mean_diff_pp": 1.9444,
+          "ci95_low_pp": -0.4137,
+          "ci95_high_pp": 4.3026,
+          "paired_t": 1.7685,
+          "t_df": 14,
+          "t_pvalue": 0.0987476952028592,
+          "wilcoxon_pvalue": 0.1234130859375,
+          "cohens_dz": 0.4566,
+          "significant_05": false
+        },
+        "DGCNN - RGNN-plain": {
+          "label": "DGCNN - RGNN-plain",
+          "n": 15,
+          "mean_diff_pp": 2.2222,
+          "ci95_low_pp": -0.8378,
+          "ci95_high_pp": 5.2823,
+          "paired_t": 1.5576,
+          "t_df": 14,
+          "t_pvalue": 0.14165027207138836,
+          "wilcoxon_pvalue": 0.144287109375,
+          "cohens_dz": 0.4022,
+          "significant_05": false
+        },
+        "DGCNN-matched - RGNN": {
+          "label": "DGCNN-matched - RGNN",
+          "n": 15,
+          "mean_diff_pp": 2.963,
+          "ci95_low_pp": -0.4006,
+          "ci95_high_pp": 6.3265,
+          "paired_t": 1.8894,
+          "t_df": 14,
+          "t_pvalue": 0.07973212159338083,
+          "wilcoxon_pvalue": 0.12158203125,
+          "cohens_dz": 0.4878,
+          "significant_05": false
+        },
+        "DGCNN-matched - RGNN-plain": {
+          "label": "DGCNN-matched - RGNN-plain",
+          "n": 15,
+          "mean_diff_pp": 3.2407,
+          "ci95_low_pp": 0.1825,
+          "ci95_high_pp": 6.2989,
+          "paired_t": 2.2728,
+          "t_df": 14,
+          "t_pvalue": 0.03932343295432016,
+          "wilcoxon_pvalue": 0.04376220703125,
+          "cohens_dz": 0.5868,
+          "significant_05": true
+        },
+        "RGNN - RGNN-plain": {
+          "label": "RGNN - RGNN-plain",
+          "n": 15,
+          "mean_diff_pp": 0.2778,
+          "ci95_low_pp": -2.2094,
+          "ci95_high_pp": 2.765,
+          "paired_t": 0.2395,
+          "t_df": 14,
+          "t_pvalue": 0.8141620861763942,
+          "wilcoxon_pvalue": 0.9365234375,
+          "cohens_dz": 0.0618,
+          "significant_05": false
+        }
+      }
+    }
+  }
+}

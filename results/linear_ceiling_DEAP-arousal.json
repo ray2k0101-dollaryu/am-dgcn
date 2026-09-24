@@ -1,0 +1,14 @@
+{
+  "dataset": "DEAP-arousal",
+  "n_trials": 1280,
+  "n_features": 20320,
+  "n_classes": 2,
+  "sd_accuracy_mean": 0.57578125,
+  "sd_accuracy_std": 0.02939826206597934,
+  "sd_f1_mean": 0.5610073245737073,
+  "sd_f1_std": 0.029841199155075576,
+  "si_accuracy_mean": 0.5085937500000001,
+  "si_accuracy_std": 0.1392795882781734,
+  "si_f1_mean": 0.4215057159309618,
+  "si_f1_std": 0.11284365454758165
+}

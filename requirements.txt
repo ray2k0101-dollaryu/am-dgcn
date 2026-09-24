@@ -1,0 +1,21 @@
+# Pinned to the versions the reported results were produced with.
+# Python 3.13.14 was used; anything >= 3.10 should work.
+#
+# The first group is enough to REGENERATE EVERY FIGURE AND CHECK EVERY TABLE
+# VALUE from the shipped result files, on a laptop, in seconds.  The second
+# group is only needed to retrain the models, which additionally requires the
+# SEED / SEED-IV / DEAP datasets (see README).
+
+numpy==2.5.2
+matplotlib==3.11.1
+
+# --- retraining only -------------------------------------------------------
+scipy==1.18.0
+scikit-learn==1.9.0
+torch==2.6.0+cpu
+torch-geometric==2.8.0.post1
+
+# optional, guarded by try/except in the code; install if your environment
+# needs them
+#   mne   -- advanced preprocessing in am_dgcn_model.py (HAS_MNE flag)
+#   h5py  -- MATLAB v7.3 .mat files in run_experiment.py (HAS_H5PY flag)

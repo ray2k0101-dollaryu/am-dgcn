@@ -1,0 +1,14 @@
+{
+  "dataset": "DEAP-valence",
+  "n_trials": 1280,
+  "n_features": 20320,
+  "n_classes": 2,
+  "sd_accuracy_mean": 0.59765625,
+  "sd_accuracy_std": 0.01330420809838,
+  "sd_f1_mean": 0.5892433251569631,
+  "sd_f1_std": 0.01324404971271681,
+  "si_accuracy_mean": 0.55078125,
+  "si_accuracy_std": 0.0880528017637003,
+  "si_f1_mean": 0.4861414818373301,
+  "si_f1_std": 0.10934342821566632
+}

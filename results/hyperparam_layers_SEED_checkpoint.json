@@ -1,0 +1,42 @@
+{
+  "layers_1": {
+    "config": {
+      "n_gcn_layers": 1
+    },
+    "mean_accuracy": 0.6459259259259258,
+    "std_accuracy": 0.09685309113292537,
+    "mean_f1": 0.6059340675701368,
+    "std_f1": 0.1231229982626924,
+    "n_params": 67582
+  },
+  "layers_2": {
+    "config": {
+      "n_gcn_layers": 2
+    },
+    "mean_accuracy": 0.6370370370370371,
+    "std_accuracy": 0.1183331884309088,
+    "mean_f1": 0.5948386566133881,
+    "std_f1": 0.14461246544092962,
+    "n_params": 67582
+  },
+  "layers_3": {
+    "config": {
+      "n_gcn_layers": 3
+    },
+    "mean_accuracy": 0.6340740740740739,
+    "std_accuracy": 0.09833734385348794,
+    "mean_f1": 0.587730186302579,
+    "std_f1": 0.12483020902917273,
+    "n_params": 76158
+  },
+  "layers_4": {
+    "config": {
+      "n_gcn_layers": 4
+    },
+    "mean_accuracy": 0.6340740740740739,
+    "std_accuracy": 0.10882588250196716,
+    "mean_f1": 0.5911120665370448,
+    "std_f1": 0.13592290515657376,
+    "n_params": 84734
+  }
+}

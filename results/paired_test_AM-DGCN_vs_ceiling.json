@@ -1,0 +1,62 @@
+{
+  "paired": {
+    "SEED": {
+      "n_subjects_t": 15,
+      "n_subjects_wilcoxon": 14,
+      "n_tied": 1,
+      "amdgc_mean": 0.6444444444444444,
+      "ceiling_mean": 0.52,
+      "mean_diff": 0.12444444444444445,
+      "paired_t": 7.020926803040515,
+      "t_df": 14,
+      "t_pvalue": 6.044600458698716e-06,
+      "wilcoxon_W": 0,
+      "wilcoxon_pvalue": 0.0001220703125,
+      "wilcoxon_method": "exact"
+    },
+    "SEED-IV": {
+      "n_subjects_t": 15,
+      "n_subjects_wilcoxon": 15,
+      "n_tied": 0,
+      "amdgc_mean": 0.4962962962962963,
+      "ceiling_mean": 0.3981533333333333,
+      "mean_diff": 0.09814296296296296,
+      "paired_t": 4.640454104674442,
+      "t_df": 14,
+      "t_pvalue": 0.00038194039126776124,
+      "wilcoxon_W": 8.0,
+      "wilcoxon_pvalue": 0.00152587890625,
+      "wilcoxon_method": "exact"
+    },
+    "DEAP-valence": {
+      "n_subjects_t": 32,
+      "n_subjects_wilcoxon": 27,
+      "n_tied": 5,
+      "amdgc_mean": 0.59921875,
+      "ceiling_mean": 0.55078125,
+      "mean_diff": 0.0484375,
+      "paired_t": 2.2936083443241677,
+      "t_df": 31,
+      "t_pvalue": 0.028751914517667294,
+      "wilcoxon_W": 106.0,
+      "wilcoxon_pvalue": 0.04747225514291831,
+      "wilcoxon_method": "normal-approx"
+    },
+    "DEAP-arousal": {
+      "n_subjects_t": 32,
+      "n_subjects_wilcoxon": 28,
+      "n_tied": 4,
+      "amdgc_mean": 0.621875,
+      "ceiling_mean": 0.50859375,
+      "mean_diff": 0.11328125,
+      "paired_t": 4.50415951329645,
+      "t_df": 31,
+      "t_pvalue": 8.8470095179123e-05,
+      "wilcoxon_W": 20.0,
+      "wilcoxon_pvalue": 3.241728902025898e-05,
+      "wilcoxon_method": "normal-approx"
+    }
+  },
+  "aggregate_only": {},
+  "assumption": "Per-subject SI scores paired by subject index under identical LOSO protocol (AM-DGCN si_results.json vs linear_ceiling.py log)."
+}
