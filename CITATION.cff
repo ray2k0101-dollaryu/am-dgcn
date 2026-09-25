@@ -15,14 +15,20 @@ abstract: >-
   multi-scale graph hierarchy from that of a parallel linear shortcut under
   leave-one-subject-out evaluation on SEED, SEED-IV and DEAP, and includes
   matched linear-ceiling controls and a ten-variant ablation.
-version: "1.0.0"
+version: "1.0.1"
 date-released: "2026-09-24"
 license: MIT
+doi: "10.5281/zenodo.22933603"
 
-# The account "ray2k0101-dollaryu" exists (checked 2026-09-24), but the
-# repository itself has not been created yet, so this URL does not resolve.
-# It must exist before manuscript submission, because the manuscript's Data
-# Availability Statement points here.
+# NOTE: `version` is the tag name, so it tracks whatever tag was released --
+# not the project's own semver intent.  The first attempt was tagged v1.0.0 and
+# archived nothing; re-tagging produced v1.0.1, which is now the ONLY archived
+# version (Zenodo concept 10.5281/zenodo.22933602 lists exactly one record).
+# There is therefore no citable v1.0.0 DOI, and this file must not claim one.
+# The tag itself lives on GitHub and is deliberately left alone: as the only
+# archived version, v1.0.1 is the citable one, and deleting it would redirect
+# every future citation of that DOI to a fresh, differently-numbered record.
+
 repository-code: "https://github.com/ray2k0101-dollaryu/am-dgcn"
 
 authors:
