@@ -7,7 +7,7 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the paper below."
 
-title: "AM-DGCN: does the multi-scale graph help? A systematic controlled study of EEG emotion recognition"
+title: "Reporting Protocol Determines the Measured Advantage of EEG Graph Neural Networks"
 abstract: >-
   Code and result files reproducing every table and figure of a controlled study
   of AM-DGCN, an adaptive multi-scale dynamic graph convolutional network for
@@ -15,10 +15,16 @@ abstract: >-
   multi-scale graph hierarchy from that of a parallel linear shortcut under
   leave-one-subject-out evaluation on SEED, SEED-IV and DEAP, and includes
   matched linear-ceiling controls and a ten-variant ablation.
-version: "1.0.1"
-date-released: "2026-09-24"
+version: "v1.0.2"
+date-released: "2026-10-18"
 license: MIT
-doi: "10.5281/zenodo.22933603"
+doi: "10.5281/zenodo.22933602"
+
+# The concept DOI ("all versions") is used here because this file ships inside
+# every archived snapshot: a version DOI would be stale in the very record that
+# contains it.  The concept DOI always resolves to the newest version --
+# 10.5281/zenodo.22933603 was v1.0.1, and it is the version DOI of v1.0.2 that
+# the paper cites in its Data availability statement.
 
 # NOTE: `version` is the tag name, so it tracks whatever tag was released --
 # not the project's own semver intent.  The first attempt was tagged v1.0.0 and
@@ -41,7 +47,7 @@ authors:
 
 preferred-citation:
   type: article
-  title: "Does the Multi-Scale Graph Help? A Systematic Controlled Study of AM-DGCN for EEG Emotion Recognition"
+  title: "Reporting Protocol Determines the Measured Advantage of EEG Graph Neural Networks"
   authors:
     - family-names: Yu
       given-names: Lei
@@ -49,7 +55,4 @@ preferred-citation:
       given-names: Rongtao
     - family-names: Wang
       given-names: Decheng
-  journal: "Brain Sciences"
-  publisher:
-    name: MDPI
   year: 2026
