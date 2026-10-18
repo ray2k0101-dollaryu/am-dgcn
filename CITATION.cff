@@ -22,18 +22,18 @@ doi: "10.5281/zenodo.22933602"
 
 # The concept DOI ("all versions") is used here because this file ships inside
 # every archived snapshot: a version DOI would be stale in the very record that
-# contains it.  The concept DOI always resolves to the newest version --
-# 10.5281/zenodo.22933603 was v1.0.1, and it is the version DOI of v1.0.2 that
-# the paper cites in its Data availability statement.
+# contains it.  The concept DOI always resolves to the newest version.
+# Version DOIs, for reference:
+#   v1.0.1 -> 10.5281/zenodo.22933603   superseded
+#   v1.0.2 -> 10.5281/zenodo.23452057   cited by the paper's Data availability
 
 # NOTE: `version` is the tag name, so it tracks whatever tag was released --
 # not the project's own semver intent.  The first attempt was tagged v1.0.0 and
-# archived nothing; re-tagging produced v1.0.1, which is now the ONLY archived
-# version (Zenodo concept 10.5281/zenodo.22933602 lists exactly one record).
-# There is therefore no citable v1.0.0 DOI, and this file must not claim one.
-# The tag itself lives on GitHub and is deliberately left alone: as the only
-# archived version, v1.0.1 is the citable one, and deleting it would redirect
-# every future citation of that DOI to a fresh, differently-numbered record.
+# archived nothing; re-tagging produced v1.0.1, and v1.0.2 followed when the
+# title changed.  There is therefore no citable v1.0.0 DOI, and this file must
+# not claim one.  No released tag is ever deleted: each archived tag keeps its
+# own version DOI resolving, so citations already made against v1.0.1 remain
+# valid after v1.0.2 is published.
 
 repository-code: "https://github.com/ray2k0101-dollaryu/am-dgcn"
 
