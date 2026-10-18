@@ -1,3 +1,5 @@
+[README.md](https://github.com/user-attachments/files/33628211/README.md)
+[README.md](https://github.com/user-attachments/files/33628190/README.md)
 AM-DGCN — reporting protocol determines the measured advantage  Code and result files for  Reporting Protocol Determines the Measured Advantage of EEG Graph
 Neural Networks — Lei Yu, Rongtao Ding, Decheng Wang — 2026.   The paper asks how much of a multi-scale graph neural network's cross-subject
 accuracy comes from its graph hierarchy once the linear signal already present in
@@ -81,6 +83,7 @@ training; nothing in the project ever serialised a model.  Verification  python 
 string, nothing oversized or derived from a licensed dataset, that the figures
 regenerate byte-identically from results/, and that manifest.md accounts for
 every table and figure referenced in the paper.  It reports remaining
+[README.md](https://github.com/user-attachments/files/33628232/README.md)
 author-supplied placeholders (there is one: the repository URL) as a count
 rather than failing on them.  Citation and licence  Code and result files: MIT (see LICENSE).  Please cite the paper — see
 CITATION.cff.  The datasets keep their own terms and are not covered by that
